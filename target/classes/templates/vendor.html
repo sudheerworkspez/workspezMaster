@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Vendor</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<form autocomplete="off" action="#" th:action="@{/registration}"
+					th:object="${user}" method="post" class="form-horizontal"
+					role="form">
+					<h2>Customer</h2>
+					<div class="form-group">
+						<div class="col-sm-9">
+							<label th:if="${#fields.hasErrors('customerName')}"
+								th:errors="*{customerName}" class="validation-message"></label>
+							<input type="text" th:field="*{customerName}"
+								placeholder="CustomerName" class="form-control" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-sm-9">
+							<label th:if="${#fields.hasErrors('mainPhone')}"
+								th:errors="*{mainPhone}" class="validation-message"></label> <input
+								type="text" th:field="*{mainPhone}" placeholder="Main Phone"
+								class="form-control" />
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-9">
+							<label th:if="${#fields.hasErrors('businessBegistrationNumber')}"
+								th:errors="*{businessBegistrationNumber}"
+								class="validation-message"></label> <input type="text"
+								th:field="*{businessBegistrationNumber}"
+								placeholder="Business Registration Number" class="form-control" />
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-9">
+							<label th:if="${#fields.hasErrors('gst/TaxNumber')}"
+								th:errors="*{gst/TaxNumber}" class="validation-message"></label>
+							<input type="text" th:field="*{gst/TaxNumber}"
+								placeholder="GST/Tax Number" class="form-control" />
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-9">
+							<label th:if="${#fields.hasErrors('mainEmail')}"
+								th:errors="*{mainEmail}" class="validation-message"></label> <input
+								type="text" th:field="*{mainEmail}" placeholder="Main Email"
+								class="form-control" />
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-9">
+							<label th:if="${#fields.hasErrors('website')}"
+								th:errors="*{website}" class="validation-message"></label> <input
+								type="text" th:field="*{website}" placeholder="Website"
+								class="form-control" />
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-9">
+							<label th:if="${#fields.hasErrors('fax')}" th:errors="*{fax}"
+								class="validation-message"></label> <input type="text"
+								th:field="*{fax}" placeholder="Fax" class="form-control" />
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-9">
+							<label th:if="${#fields.hasErrors('billTo')}"
+								th:errors="*{billTo}" class="validation-message"></label> <input
+								type="text" th:field="*{billTo}" placeholder="Bill To"
+								class="form-control" />
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-9">
+							<label th:if="${#fields.hasErrors('shipTo')}"
+								th:errors="*{shipTo}" class="validation-message"></label> <input
+								type="text" th:field="*{shipTo}" placeholder="Ship To"
+								class="form-control" />
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-9">Sub window for Payment</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-9">
+							<button type="submit" class="btn btn-primary btn-block">Submit1</button>
+						</div>
+					</div>
+
+					<span th:utext="${successMessage}"></span>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
